@@ -1,33 +1,23 @@
 fileFormatVersion: 2
-guid: 60f39b9948f51464b89203dc1a5e2bab
+guid: f682eaf446476ce45aaf5380d7e4afe3
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Ground
-    100002: Launch_pad
-    100004: //RootNode
-    100006: Platform
-    400000: Ground
-    400002: Launch_pad
-    400004: //RootNode
-    400006: Platform
-    2100000: Ground_m
-    2100002: Launch_pad_m
-    2300000: Ground
-    2300002: Launch_pad
-    2300004: Platform
-    3300000: Ground
-    3300002: Launch_pad
-    3300004: Platform
-    4300000: Ground
-    4300002: Launch_pad
-    4300004: Platform
-    6400000: Ground
-    6400002: Launch_pad
-    6400004: Platform
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Launch_pad_m
+    2100002: Launch_pad_lamp_m
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Launch_pad
     7400000: Default Take
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Launch_pad_lamp_m
+    second: {fileID: 2100000, guid: b17c06ccafe4b6b4fa9c3c8ddf87779c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -60,11 +50,11 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1

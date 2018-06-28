@@ -18,14 +18,17 @@ public class Rocket : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		ProcessInput();
+	void Update ()
+	{
+		Thrust();
+		Rotate();
 	}
 
-	private void ProcessInput()
+	private void Thrust()
 	{
 		if (Input.GetButton("Jump")) {
 			rigidbody.AddRelativeForce(Vector3.up);
+
 			if (!audioSource.isPlaying) {
 				audioSource.Play();
 			} else {
@@ -36,6 +39,11 @@ public class Rocket : MonoBehaviour {
 				audioSource.mute = true;
 			}
 		}
+	}
+
+	private void Rotate()
+	{
+		rigidbody.freezeRotation = true;
 
 		MoveH = Input.GetAxis("Horizontal");
 		MoveV = Input.GetAxis("Vertical");
@@ -45,5 +53,7 @@ public class Rocket : MonoBehaviour {
 		} else if (MoveH < 0) {
 			transform.Rotate(Vector3.forward);
 		}
+
+		rigidbody.freezeRotation = false;
 	}
 }

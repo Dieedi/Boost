@@ -56,7 +56,7 @@ public class Rocket : MonoBehaviour {
 		float rotationSpeed = rcsThrust * Time.deltaTime;
 		
 		if (!MoveMod && MoveH != 0) {
-			isMoving = true;
+			//isMoving = true;
 			PlaySound(GazSound);
 
 			if (MoveH > 0) {

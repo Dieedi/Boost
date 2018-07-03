@@ -19,12 +19,16 @@ public class Player : MonoBehaviour {
 	[SerializeField] private float Thruster = 750;
 	[SerializeField] private AudioClip ThrustSound;
 	[SerializeField] private AudioClip GazSound;
-	float rotmax = 0;
+	[SerializeField] private AudioClip EndingSound;
+	[SerializeField] private ParticleSystem DustEffect;
+	private LayerMask GroundLayer;
+	private float rotmax = 0;
 	private float MoveH = 0;
 	private float MoveV = 0;
 	private float EndingClipLength = 0f;
 	private bool SoundToggle = false;
 	private bool isMoving = false;
+	private RaycastHit DustHit;
 	private Rigidbody rigidbody;
 	private AudioSource audioSource;
 	private Animator animator;
@@ -35,24 +39,28 @@ public class Player : MonoBehaviour {
 		rigidbody = GetComponent<Rigidbody>();
 		audioSource = GetComponent<AudioSource>();
 		animator = GetComponentInChildren<Animator>();
+		GroundLayer = LayerMask.NameToLayer("Ground");
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		IsAlive();
+		StateCheck();
 	}
 
-	private void IsAlive()
+	private void StateCheck()
 	{
 		switch (state) {
 			case State.Alive:
 				Thrust();
 				Rotate();
 				Animate();
+				CastDust();
+				PlaySounds();
 				break;
 			default:
 				Animate();
+				PlaySounds();
 				break;
 		}
 	}
@@ -67,16 +75,14 @@ public class Player : MonoBehaviour {
 	private void Thrust()
 	{
 		if (Input.GetButton("Jump")) {
-			isMoving = true;
 			float ThrusterSpeed = Thruster * Time.deltaTime;
 			rigidbody.AddRelativeForce(Vector3.up * ThrusterSpeed);
 
 			audioSource.pitch += .05f;
-			audioSource.pitch = Mathf.Clamp(audioSource.pitch, .9f, 1.3f);
 		} else {
 			audioSource.pitch -= .05f;
-			audioSource.pitch = Mathf.Clamp(audioSource.pitch, .9f, 1.3f);
 		}
+		audioSource.pitch = Mathf.Clamp(audioSource.pitch, .9f, 1.3f);
 	}
 
 	private void Rotate()
@@ -85,16 +91,29 @@ public class Player : MonoBehaviour {
 		MoveV = Input.GetAxis("Vertical");
 
 		float rotationSpeed = rcsThrust * Time.deltaTime;
-		
+
 		if (MoveH != 0) {
-			rotmax += MoveH * rotationSpeed;
-			rotmax = Mathf.Clamp(rotmax, -45.0f, 45.0f);
+
+			//rotmax += MoveH * rotationSpeed;
+			//rotmax = Mathf.Clamp(rotmax, -45.0f, 45.0f);
 			if (MoveH > 0) {
-				transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, -rotmax);
-				//rigidbody.AddRelativeForce(-Vector3.right * rotationSpeed);
+				//transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, -rotmax);
+				rigidbody.AddRelativeForce(Vector3.right * rotationSpeed);
 			} else if (MoveH < 0) {
-				transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, -rotmax);
-				//rigidbody.AddRelativeForce(Vector3.right * rotationSpeed);
+				//transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, -rotmax);
+				rigidbody.AddRelativeForce(-Vector3.right * rotationSpeed);
+			}
+		}
+		if (MoveV != 0) {
+
+			//rotmax += MoveV * rotationSpeed;
+			//rotmax = Mathf.Clamp(rotmax, -45.0f, 45.0f);
+			if (MoveV > 0) {
+				//transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, -rotmax);
+				rigidbody.AddRelativeForce(Vector3.up * rotationSpeed);
+			} else if (MoveV < 0) {
+				//transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, -rotmax);
+				rigidbody.AddRelativeForce(-Vector3.up * rotationSpeed);
 			}
 		}
 	}
@@ -115,10 +134,33 @@ public class Player : MonoBehaviour {
 		}
 	}
 
+	private void CastDust()
+	{
+		int layerMask = 1 << 9;
+		if (isMoving && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out DustHit, Mathf.Infinity, layerMask)) {
+			if (DustHit.distance <= 4)
+				DustEffect.Play();
+			else
+				DustEffect.Stop();
+		} else {
+			DustEffect.Stop();
+		}
+	}
+
+	private void PlaySounds()
+	{
+		if (state == State.Transcending) {
+			audioSource.pitch = 1.0f;
+			audioSource.clip = EndingSound;
+			if (!audioSource.isPlaying)
+				audioSource.Play();
+		}
+	}
+
 	IEnumerator AnimateTranscending()
 	{
 		animator.SetBool("hasFinish", true);
-		yield return new WaitForSeconds(.5f);
+		yield return new WaitForSeconds(.8f);
 		EndingClipLength = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
 		Debug.Log(EndingClipLength);
 		Invoke("LoadNextScene", EndingClipLength);
@@ -126,9 +168,11 @@ public class Player : MonoBehaviour {
 
 	private void AnimateMoves()
 	{
-		if (Input.GetButton("Jump") || MoveH != 0) {
+		if (Input.GetButton("Jump") || MoveH != 0 || MoveV != 0) {
+			Debug.Log("Moving");
 			isMoving = true;
 		} else {
+			Debug.Log("should stop");
 			isMoving = false;
 		}
 		animator.SetBool("isMoving", isMoving);
@@ -144,7 +188,7 @@ public class Player : MonoBehaviour {
 				state = State.Transcending;
 				break;
 			default:
-				state = State.Dying;
+				state = State.Alive;
 				break;
 		}
 	}

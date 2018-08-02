@@ -1,33 +1,162 @@
 fileFormatVersion: 2
 guid: f7028336805986846948d6b93661710b
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: RockWall_high
     100002: RockWall_low
     100004: RockWall_low_001
     100006: //RootNode
+    100008: Simple_section_high
+    100010: Simple_section_high_001
+    100012: Simple_section_low
+    100014: Simple_section_crossing_low
+    100016: Simple_section_endB_low
+    100018: Simple_section_endL_low
+    100020: Simple_section_endR_low
+    100022: Simple_section_endT_low
+    100024: Simple_section_floor_endL_low
+    100026: Simple_section_floor_endR_low
+    100028: Simple_section_floor_low
+    100030: Simple_section_hor_low
+    100032: Simple_section_lamp_low
+    100034: Simple_section_turnB_low
+    100036: Simple_section_turnL_low
+    100038: Simple_section_turnLB_low
+    100040: Simple_section_turnLT_low
+    100042: Simple_section_turnR_low
+    100044: Simple_section_turnRB_low
+    100046: Simple_section_turnRT_low
+    100048: Simple_section_turnT_low
     400000: RockWall_high
     400002: RockWall_low
     400004: RockWall_low_001
     400006: //RootNode
+    400008: Simple_section_high
+    400010: Simple_section_high_001
+    400012: Simple_section_low
+    400014: Simple_section_crossing_low
+    400016: Simple_section_endB_low
+    400018: Simple_section_endL_low
+    400020: Simple_section_endR_low
+    400022: Simple_section_endT_low
+    400024: Simple_section_floor_endL_low
+    400026: Simple_section_floor_endR_low
+    400028: Simple_section_floor_low
+    400030: Simple_section_hor_low
+    400032: Simple_section_lamp_low
+    400034: Simple_section_turnB_low
+    400036: Simple_section_turnL_low
+    400038: Simple_section_turnLB_low
+    400040: Simple_section_turnLT_low
+    400042: Simple_section_turnR_low
+    400044: Simple_section_turnRB_low
+    400046: Simple_section_turnRT_low
+    400048: Simple_section_turnT_low
     2100000: Rock_wall_m_001__rockwall_displacment
     2100002: Rock_wall_m
+    2100004: None__rockwall_displacment
+    2100006: unnamed
+    2100008: Simple_section_grid_m__rockwall_displacment
+    2100010: Simple_section_m__rockwall_displacment
+    2100012: TT_checker_2048x2048_COLOR_GRID__rockwall_displacment
+    2100014: TT_checker_2048x2048_COLOR_GRID
+    2100016: TT_checker_2048x2048_COLOR_GRID_001
+    2100018: bac_000__Simple_Section_Atlas
+    2100020: bac_000__Simple_Section_End_Atlas
+    2100022: bac_000__Floor_Atlas
+    2100024: Untitle__Simple_Section_Atlas
+    2100026: bac_000__Simple_Section_Turn_Atlas
+    2100028: bac_000__Simple_Section_Turndirect_Atlas
     2300000: RockWall_high
     2300002: RockWall_low
     2300004: RockWall_low_001
     2300006: //RootNode
+    2300008: Simple_section_high
+    2300010: Simple_section_high_001
+    2300012: Simple_section_low
+    2300014: Simple_section_crossing_low
+    2300016: Simple_section_endB_low
+    2300018: Simple_section_endL_low
+    2300020: Simple_section_endR_low
+    2300022: Simple_section_endT_low
+    2300024: Simple_section_floor_endL_low
+    2300026: Simple_section_floor_endR_low
+    2300028: Simple_section_floor_low
+    2300030: Simple_section_hor_low
+    2300032: Simple_section_lamp_low
+    2300034: Simple_section_turnB_low
+    2300036: Simple_section_turnL_low
+    2300038: Simple_section_turnLB_low
+    2300040: Simple_section_turnLT_low
+    2300042: Simple_section_turnR_low
+    2300044: Simple_section_turnRB_low
+    2300046: Simple_section_turnRT_low
+    2300048: Simple_section_turnT_low
     3300000: RockWall_high
     3300002: RockWall_low
     3300004: RockWall_low_001
     3300006: //RootNode
+    3300008: Simple_section_high
+    3300010: Simple_section_high_001
+    3300012: Simple_section_low
+    3300014: Simple_section_crossing_low
+    3300016: Simple_section_endB_low
+    3300018: Simple_section_endL_low
+    3300020: Simple_section_endR_low
+    3300022: Simple_section_endT_low
+    3300024: Simple_section_floor_endL_low
+    3300026: Simple_section_floor_endR_low
+    3300028: Simple_section_floor_low
+    3300030: Simple_section_hor_low
+    3300032: Simple_section_lamp_low
+    3300034: Simple_section_turnB_low
+    3300036: Simple_section_turnL_low
+    3300038: Simple_section_turnLB_low
+    3300040: Simple_section_turnLT_low
+    3300042: Simple_section_turnR_low
+    3300044: Simple_section_turnRB_low
+    3300046: Simple_section_turnRT_low
+    3300048: Simple_section_turnT_low
     4300000: RockWall_low_001
     4300002: RockWall_high
     4300004: RockWall_low
     4300006: Simple_section
+    4300008: Simple_section_high_001
+    4300010: Simple_section_high
+    4300012: Simple_section_low
+    4300014: Simple_section_crossing_low
+    4300016: Simple_section_endB_low
+    4300018: Simple_section_endL_low
+    4300020: Simple_section_endR_low
+    4300022: Simple_section_endT_low
+    4300024: Simple_section_floor_endL_low
+    4300026: Simple_section_floor_endR_low
+    4300028: Simple_section_floor_low
+    4300030: Simple_section_hor_low
+    4300032: Simple_section_lamp_low
+    4300034: Simple_section_turnB_low
+    4300036: Simple_section_turnL_low
+    4300038: Simple_section_turnLB_low
+    4300040: Simple_section_turnLT_low
+    4300042: Simple_section_turnR_low
+    4300044: Simple_section_turnRB_low
+    4300046: Simple_section_turnRT_low
+    4300048: Simple_section_turnT_low
     7400000: Default Take
     9500000: //RootNode
-  externalObjects: {}
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Untitle__Simple_Section_Atlas
+    second: {fileID: 2100000, guid: 7c1a3910ecc54934a8fbc15f0080e71b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bac_000__Simple_Section_Atlas
+    second: {fileID: 2100000, guid: 7c1a3910ecc54934a8fbc15f0080e71b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -55,7 +184,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -63,9 +192,9 @@ ModelImporter:
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
-    swapUVChannels: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 1
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
@@ -73,11 +202,13 @@ ModelImporter:
     weldVertices: 1
     preserveHierarchy: 0
     indexFormat: 0
-    secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
-    secondaryUVHardAngle: 88
+    secondaryUVAngleDistortion: 1
+    secondaryUVAreaDistortion: 1
+    secondaryUVHardAngle: 0
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

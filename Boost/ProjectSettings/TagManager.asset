@@ -15,11 +15,11 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - Ground
-  - 
-  - 
-  - 
-  - 
+  - DestroyableObject
+  - internal_walls
+  - external_walls
+  - switching_walls
+  - ReparableObject
   - 
   - 
   - 

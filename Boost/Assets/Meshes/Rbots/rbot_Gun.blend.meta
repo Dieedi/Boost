@@ -1,0 +1,652 @@
+fileFormatVersion: 2
+guid: f5cce1159ab33b24fae5da27c0deff2c
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Arm_Joint_L
+    100002: Arm_Joint_R
+    100004: Armature
+    100006: Armature_001
+    100008: Body
+    100010: Body_0
+    100012: Body_001
+    100014: Body_2
+    100016: Canon_base_low
+    100018: Canon_base_low_001
+    100020: Circle
+    100022: CTRL_Body
+    100024: CTRL_IK_Lower_arm_L
+    100026: CTRL_IK_Lower_arm_L_001
+    100028: DEF_Gripper_Axis_L
+    100030: DEF_Gripper_Axis_L_001
+    100032: DEF_Lower_arm_L
+    100034: DEF_Lower_arm_L_001
+    100036: DEF_Upper_arm_L
+    100038: DEF_Upper_arm_L_001
+    100040: Eye
+    100042: Eye_0
+    100044: Gripper_Axis_L
+    100046: Gripper_Axis_R
+    100048: Gripper_hinge_L
+    100050: Gripper_hinge_L_001
+    100052: Gripper_hinge_L_002
+    100054: Gripper_hinge_L_003
+    100056: Gripper_hinge_L_004
+    100058: Gripper_hinge_L_005
+    100060: Gripper_hinge_L_006
+    100062: Gripper_hinge_L_007
+    100064: Gripper_joint_L
+    100066: Gripper_joint_L_001
+    100068: Gripper_joint_L_002
+    100070: Gripper_joint_L_003
+    100072: Gripper_joint_L_004
+    100074: Gripper_joint_L_005
+    100076: Gripper_joint_L_006
+    100078: Gripper_joint_L_007
+    100080: Gripper_L
+    100082: Gripper_L_001
+    100084: Gripper_L_002
+    100086: Gripper_L_003
+    100088: Gripper_L_004
+    100090: Gripper_L_005
+    100092: Gripper_L_006
+    100094: Gripper_L_007
+    100096: Helmet_low
+    100098: Lower_Arm_L
+    100100: Lower_Arm_R
+    100102: Lower_Eyelid
+    100104: Lower_Eyelid_0
+    100106: MCH_IK_arm_SCK_L
+    100108: MCH_IK_arm_SCK_L_001
+    100110: Rbot_Arm_Joint_L
+    100112: Rbot_Arm_Joint_R
+    100114: Rbot_eye_holder_lids_low
+    100116: Rbot_eye_holder_low
+    100118: Rbot_eye_low
+    100120: //RootNode
+    100122: Rbot_low
+    100124: Rbot_Lower_Arm_L
+    100126: Rbot_Lower_Arm_R
+    100128: Rbot_Upper_arm_L
+    100130: Rbot_Upper_arm_R
+    100132: Sphere
+    100134: Upper_Arm_L
+    100136: Upper_Arm_R
+    100138: Upper_Eyelid
+    100140: Upper_Eyelid_0
+    100142: Rbot_eye_holder_Lowerlid_low
+    100144: Rbot_eye_holder_Upperlid_low
+    400000: Arm_Joint_L
+    400002: Arm_Joint_R
+    400004: Armature
+    400006: Armature_001
+    400008: Body
+    400010: Body_0
+    400012: Body_001
+    400014: Body_2
+    400016: Canon_base_low
+    400018: Canon_base_low_001
+    400020: Circle
+    400022: CTRL_Body
+    400024: CTRL_IK_Lower_arm_L
+    400026: CTRL_IK_Lower_arm_L_001
+    400028: DEF_Gripper_Axis_L
+    400030: DEF_Gripper_Axis_L_001
+    400032: DEF_Lower_arm_L
+    400034: DEF_Lower_arm_L_001
+    400036: DEF_Upper_arm_L
+    400038: DEF_Upper_arm_L_001
+    400040: Eye
+    400042: Eye_0
+    400044: Gripper_Axis_L
+    400046: Gripper_Axis_R
+    400048: Gripper_hinge_L
+    400050: Gripper_hinge_L_001
+    400052: Gripper_hinge_L_002
+    400054: Gripper_hinge_L_003
+    400056: Gripper_hinge_L_004
+    400058: Gripper_hinge_L_005
+    400060: Gripper_hinge_L_006
+    400062: Gripper_hinge_L_007
+    400064: Gripper_joint_L
+    400066: Gripper_joint_L_001
+    400068: Gripper_joint_L_002
+    400070: Gripper_joint_L_003
+    400072: Gripper_joint_L_004
+    400074: Gripper_joint_L_005
+    400076: Gripper_joint_L_006
+    400078: Gripper_joint_L_007
+    400080: Gripper_L
+    400082: Gripper_L_001
+    400084: Gripper_L_002
+    400086: Gripper_L_003
+    400088: Gripper_L_004
+    400090: Gripper_L_005
+    400092: Gripper_L_006
+    400094: Gripper_L_007
+    400096: Helmet_low
+    400098: Lower_Arm_L
+    400100: Lower_Arm_R
+    400102: Lower_Eyelid
+    400104: Lower_Eyelid_0
+    400106: MCH_IK_arm_SCK_L
+    400108: MCH_IK_arm_SCK_L_001
+    400110: Rbot_Arm_Joint_L
+    400112: Rbot_Arm_Joint_R
+    400114: Rbot_eye_holder_lids_low
+    400116: Rbot_eye_holder_low
+    400118: Rbot_eye_low
+    400120: //RootNode
+    400122: Rbot_low
+    400124: Rbot_Lower_Arm_L
+    400126: Rbot_Lower_Arm_R
+    400128: Rbot_Upper_arm_L
+    400130: Rbot_Upper_arm_R
+    400132: Sphere
+    400134: Upper_Arm_L
+    400136: Upper_Arm_R
+    400138: Upper_Eyelid
+    400140: Upper_Eyelid_0
+    400142: Rbot_eye_holder_Lowerlid_low
+    400144: Rbot_eye_holder_Upperlid_low
+    2100000: unnamed
+    2100002: Canon_m
+    2100004: Base_m_001
+    2100006: Arm_m
+    2100008: Eye_m
+    2100010: Eye_Glass
+    2100012: Helmet_m
+    2100014: Helmet_m_001
+    2100016: Base_m
+    2100018: Arm_m_001
+    2300000: Circle
+    2300002: Sphere
+    3300000: Circle
+    3300002: Sphere
+    4300000: Sphere
+    4300002: Circle
+    4300004: Canon_base_low_001
+    4300006: Rbot_low
+    4300008: Rbot_Arm_Joint_L
+    4300010: Rbot_Arm_Joint_R
+    4300012: Rbot_Upper_arm_L
+    4300014: Rbot_Lower_Arm_L
+    4300016: Rbot_eye_low
+    4300018: Rbot_eye_holder_lids_low
+    4300020: Rbot_eye_holder_low
+    4300022: Rbot_Upper_arm_R
+    4300024: Rbot_Lower_Arm_R
+    4300026: Canon_base_low
+    4300028: Helmet_low
+    4300030: Rbot_eye_holder_Lowerlid_low
+    4300032: Rbot_eye_holder_Upperlid_low
+    7400000: Default Take
+    7400002: Idle_borring
+    7400004: Idle_looking
+    7400006: Walk
+    7400008: Awaken
+    7400010: PoseLib
+    7400012: Shot
+    7400014: Idle
+    7400016: None
+    7400018: PowerOff
+    9500000: //RootNode
+    13700000: Canon_base_low
+    13700002: Canon_base_low_001
+    13700004: Helmet_low
+    13700006: Rbot_Arm_Joint_L
+    13700008: Rbot_Arm_Joint_R
+    13700010: Rbot_eye_holder_lids_low
+    13700012: Rbot_eye_holder_low
+    13700014: Rbot_eye_low
+    13700016: Rbot_low
+    13700018: Rbot_Lower_Arm_L
+    13700020: Rbot_Lower_Arm_R
+    13700022: Rbot_Upper_arm_L
+    13700024: Rbot_Upper_arm_R
+    13700026: Rbot_eye_holder_Lowerlid_low
+    13700028: Rbot_eye_holder_Upperlid_low
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arm_m
+    second: {fileID: 2100000, guid: 1df160be967740143bdc877105853cc9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arm_m_001
+    second: {fileID: 2100000, guid: 1df160be967740143bdc877105853cc9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base_m
+    second: {fileID: 2100000, guid: 29fc339664e262840ac028773520a9d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base_m_001
+    second: {fileID: 2100000, guid: 29fc339664e262840ac028773520a9d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Canon_m
+    second: {fileID: 2100000, guid: 98f2e6fe824a61641a288da722c9ba12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye_Glass
+    second: {fileID: 2100000, guid: da6ceb138fb522b47a98e1c2d5764a5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye_m
+    second: {fileID: 2100000, guid: eb2d682d9e4d89f4daf9651e725590f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Helmet_m_001
+    second: {fileID: 2100000, guid: 68dafbee26197d748b5fd89a8b659302, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: -1
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Awaken
+      takeName: Awaken
+      firstFrame: -1
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Idle
+      firstFrame: -1
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle_borring
+      takeName: Idle_borring
+      firstFrame: -1
+      lastFrame: 239
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle_looking
+      takeName: Idle_looking
+      firstFrame: -1
+      lastFrame: 160
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: None
+      takeName: None
+      firstFrame: -1
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: PoseLib
+      takeName: PoseLib
+      firstFrame: 0
+      lastFrame: 3
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: PowerOff
+      takeName: PowerOff
+      firstFrame: -1
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Shot
+      takeName: Shot
+      firstFrame: -1
+      lastFrame: 99
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.25283593
+        functionName: ToggleGunL
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.2725061
+        functionName: ToggleGunL
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.4817518
+        functionName: ToggleGunR
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.49878347
+        functionName: ToggleGunR
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.729927
+        functionName: ToggleGunL
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.75912404
+        functionName: ToggleGunL
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Walk
+      firstFrame: -1
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 0
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 30
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

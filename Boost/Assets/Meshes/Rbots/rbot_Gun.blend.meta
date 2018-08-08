@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: f5cce1159ab33b24fae5da27c0deff2c
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: Arm_Joint_L
     100002: Arm_Joint_R
@@ -248,6 +248,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Helmet_m_001
     second: {fileID: 2100000, guid: 68dafbee26197d748b5fd89a8b659302, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: unnamed
+    second: {fileID: 2100000, guid: 7dca2295181a2924c8c1af9afda2d219, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -597,11 +602,11 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 0
@@ -620,6 +625,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 30
     normalImportMode: 0

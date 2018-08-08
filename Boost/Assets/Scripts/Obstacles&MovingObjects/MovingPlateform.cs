@@ -16,9 +16,7 @@ public class MovingPlateform : MonoBehaviour {
 
 	private Vector3 CurrentPosition;
 	private Vector3 DestinationPos;
-	private float Speed = 0;
 	private Vector3 newPos;
-	private bool moveUp, moveDown = false;
 
 	// Use this for initialization
 	void Start () {

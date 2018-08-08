@@ -68,6 +68,12 @@ ModelImporter:
     2100024: Untitle__Simple_Section_Atlas
     2100026: bac_000__Simple_Section_Turn_Atlas
     2100028: bac_000__Simple_Section_Turndirect_Atlas
+    2100030: Simple_section_m__Floor_Atlas
+    2100032: bac_001__Floor_Atlas_001
+    2100034: bac_000__Floor_Atlas_001
+    2100036: bac_002__Floor_Atlas_002
+    2100038: bac_003
+    2100040: Untitled
     2300000: RockWall_high
     2300002: RockWall_low
     2300004: RockWall_low_001
@@ -150,13 +156,43 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Untitle__Simple_Section_Atlas
-    second: {fileID: 2100000, guid: 7c1a3910ecc54934a8fbc15f0080e71b, type: 2}
+      name: bac_000__Floor_Atlas
+    second: {fileID: 2100000, guid: c995ad1815313d74e966951ff6421f81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bac_000__Floor_Atlas_001
+    second: {fileID: 2100000, guid: c995ad1815313d74e966951ff6421f81, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bac_000__Simple_Section_Atlas
-    second: {fileID: 2100000, guid: 7c1a3910ecc54934a8fbc15f0080e71b, type: 2}
+    second: {fileID: 2100000, guid: c3c0269f1b0416e4ea08631838737125, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bac_000__Simple_Section_End_Atlas
+    second: {fileID: 2100000, guid: d2bbb2906a914274fa1993a0c6c88a7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bac_000__Simple_Section_Turn_Atlas
+    second: {fileID: 2100000, guid: 57ed7b1faa199a443b17abfe486fb3ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bac_000__Simple_Section_Turndirect_Atlas
+    second: {fileID: 2100000, guid: a2506be718459a74a9c7fba126e94101, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bac_002__Floor_Atlas_002
+    second: {fileID: 2100000, guid: c995ad1815313d74e966951ff6421f81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bac_003
+    second: {fileID: 2100000, guid: 8eb130ece61632447823d784c3ba9847, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -188,14 +224,14 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 0
     importVisibility: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 0
     importLights: 0
     swapUVChannels: 1
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -204,7 +240,7 @@ ModelImporter:
     indexFormat: 0
     secondaryUVAngleDistortion: 1
     secondaryUVAreaDistortion: 1
-    secondaryUVHardAngle: 0
+    secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
@@ -214,7 +250,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -233,7 +269,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

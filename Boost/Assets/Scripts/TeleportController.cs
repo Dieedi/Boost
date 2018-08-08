@@ -6,14 +6,11 @@ using UnityEngine.Events;
 public class TeleportController : MonoBehaviour {
 
 	[SerializeField] Player player;
+	[SerializeField] UnityEvent FadeOutEvent;
 
 	private Fader fader;
 	private ParticleSystem[] particles;
-
-	private void Awake()
-	{
-	}
-
+	
 	// Use this for initialization
 	void Start () {
 		fader = player.GetComponent<Fader>();
@@ -23,26 +20,21 @@ public class TeleportController : MonoBehaviour {
 		foreach (ParticleSystem particle in particles) {
 			particle.Play();
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
 		StartCoroutine(PlayerSpawn());
 	}
 
 	IEnumerator PlayerSpawn()
 	{
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(2f);
 		player.gameObject.SetActive(true);
+		FadeOutEvent.Invoke();
 	}
 
 	public void DisableTeleport ()
 	{
-		if (fader.alphaValue >= 1) {
-			foreach (ParticleSystem particle in particles) {
-				var emission = particle.emission;
-				emission.enabled = false;
-			}
+		foreach (ParticleSystem particle in particles) {
+			var emission = particle.emission;
+			emission.enabled = false;
 		}
 	}
 }

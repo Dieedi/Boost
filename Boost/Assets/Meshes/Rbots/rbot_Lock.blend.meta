@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 89e9d3a8451224e4c9e1d070eefa315c
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: Arm_Joint_L
     100002: Arm_Joint_R
@@ -350,32 +350,32 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Arm_m_001
-    second: {fileID: 2100000, guid: 1df160be967740143bdc877105853cc9, type: 2}
+    second: {fileID: 2100000, guid: f17972cc1cbd77e49b2e586f8d7fa769, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Base_m
-    second: {fileID: 2100000, guid: a0eac7a2154d68b4c9d41f79fe22bc68, type: 2}
+    second: {fileID: 2100000, guid: f17972cc1cbd77e49b2e586f8d7fa769, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Eye_Glass
-    second: {fileID: 2100000, guid: da6ceb138fb522b47a98e1c2d5764a5a, type: 2}
+    second: {fileID: 2100000, guid: f17972cc1cbd77e49b2e586f8d7fa769, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Eye_m
-    second: {fileID: 2100000, guid: eb2d682d9e4d89f4daf9651e725590f5, type: 2}
+    second: {fileID: 2100000, guid: f17972cc1cbd77e49b2e586f8d7fa769, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hands_m
-    second: {fileID: 2100000, guid: 1ed59dcd6ed5bc247bbd78fdd1978938, type: 2}
+    second: {fileID: 2100000, guid: f17972cc1cbd77e49b2e586f8d7fa769, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: unnamed
-    second: {fileID: 2100000, guid: eb2d682d9e4d89f4daf9651e725590f5, type: 2}
+    second: {fileID: 2100000, guid: f17972cc1cbd77e49b2e586f8d7fa769, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -578,7 +578,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -601,6 +601,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

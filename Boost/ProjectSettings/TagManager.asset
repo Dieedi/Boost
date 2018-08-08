@@ -20,9 +20,9 @@ TagManager:
   - external_walls
   - switching_walls
   - ReparableObject
-  - 
-  - 
-  - 
+  - Player
+  - WorldLimits
+  - Interactable
   - 
   - 
   - 

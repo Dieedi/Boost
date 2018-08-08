@@ -7,14 +7,7 @@ public class BulletHitController : MonoBehaviour {
 
 	[SerializeField] GameObject ObjectToDestroy;
 	[SerializeField] UnityEvent BulletHitEvent;
-
-	private ParticleSystem Bullet;
-
-	// Use this for initialization
-	void Start () {
-		Bullet = GetComponent<ParticleSystem>();
-	}
-
+	
 	private void Update()
 	{
 		transform.LookAt(ObjectToDestroy.transform);

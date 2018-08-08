@@ -8,13 +8,7 @@ public class ElectricalArcController : MonoBehaviour {
 	[SerializeField] GameObject RepairPanel;
 	[SerializeField] UnityEvent IsRepairingEvent;
 
-	private ParticleSystem ArcParticles;
 	private bool isRepairing = false;
-
-	// Use this for initialization
-	void Start () {
-		ArcParticles = GetComponent<ParticleSystem>();
-	}
 
 	private void OnParticleCollision(GameObject other)
 	{

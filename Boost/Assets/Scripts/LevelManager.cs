@@ -9,7 +9,6 @@ public class LevelManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		CurrentScene = SceneManager.GetActiveScene();
-		//Debug.Log("Current scene index is : " + CurrentScene.buildIndex);
 	}
 	
 	// Update is called once per frame
@@ -20,7 +19,11 @@ public class LevelManager : MonoBehaviour {
 	public void LoadNextScene()
 	{
 		if (SceneManager.sceneCount >= CurrentScene.buildIndex) {
-			SceneManager.LoadScene(CurrentScene.buildIndex + 1);
+			if (SceneManager.GetSceneByBuildIndex(CurrentScene.buildIndex + 1).name.Contains("enlighten")) {
+				SceneManager.LoadScene(CurrentScene.buildIndex + 2);
+			} else {
+				SceneManager.LoadScene(CurrentScene.buildIndex + 1);
+			}
 		} else {
 			//Debug.LogWarning("there no " + (CurrentScene.buildIndex + 2) + " index existing in build");
 		}

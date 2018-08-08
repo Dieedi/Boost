@@ -11,14 +11,12 @@ public class Switcher : MonoBehaviour {
 	[SerializeField] Material OnMaterial;
 	[SerializeField] GameObject player;
 	[SerializeField] GameObject ObjectToActivate;
-	[SerializeField] bool IsTimingSwitch = false;
 	[SerializeField] UnityEvent e_MovePlatform;
 	[SerializeField] UnityEvent e_PlayerInTrigger;
 	[SerializeField] UnityEvent e_PlayerExitTrigger;
 
 	public float Timer = 3f;
 
-	private bool SwitchActivated = false;
 	private Material[] SwitchMaterials;
 	private bool PlatformActivated = false;
 

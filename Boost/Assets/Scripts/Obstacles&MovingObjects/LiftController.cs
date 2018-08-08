@@ -15,7 +15,6 @@ public class LiftController : MonoBehaviour {
 	private Vector3 CurrentPos;
 	private Vector3 Direction = Vector3.up;
 	private bool movementBegins = false;
-	private BoxCollider[] colliders;
 
 	private void Awake()
 	{
@@ -23,7 +22,6 @@ public class LiftController : MonoBehaviour {
 		RestPos = thisPlatform.transform.localPosition;
 		CurrentPos = new Vector3(StartingPosition.x, StartingPosition.y, StartingPosition.z);
 		thisPlatform.transform.localPosition = CurrentPos;
-		colliders = GetComponents<BoxCollider>();
 		thisPlatform.ComeAndGo = true;
 	}
 
@@ -54,6 +52,20 @@ public class LiftController : MonoBehaviour {
 			movementBegins = true;
 			thisPlatform.platformBlock = false;
 			StartCoroutine(LiftUp());
+		}
+	}
+
+	private void OnCollisionStay(Collision collision)
+	{
+		if (collision.gameObject.name == player.name) {
+			player.transform.parent = transform;
+		}
+	}
+
+	private void OnCollisionExit(Collision collision)
+	{
+		if (collision.gameObject.name == player.name) {
+			player.transform.parent = null;
 		}
 	}
 

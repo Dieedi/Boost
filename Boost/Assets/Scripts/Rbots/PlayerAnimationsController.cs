@@ -11,35 +11,31 @@ public class PlayerAnimationsController : MonoBehaviour {
 	private bool GunShotOn = false;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		animator = GetComponentInChildren<Animator>();
-	}
-
-	private void FixedUpdate()
-	{
-		animator.SetBool("Power", PowerOn);
-		animator.SetBool("Braze", BrazeOn);
-		animator.SetBool("Unlock", UnlockOn);
-		animator.SetBool("GunShot", GunShotOn);
 	}
 
 	public void Awaken()
 	{
 		PowerOn = true;
+		animator.SetBool("Power", PowerOn);
 	}
 
 	public void ToggleBraze()
 	{
 		BrazeOn = !BrazeOn;
+		animator.SetBool("Braze", BrazeOn);
 	}
 
 	public void ToggleUnlock()
 	{
 		UnlockOn = !UnlockOn;
+		animator.SetBool("Unlock", UnlockOn);
 	}
 
 	public void ToggleGunShot()
 	{
 		GunShotOn = !GunShotOn;
+		animator.SetBool("GunShot", GunShotOn);
 	}
 }

@@ -4,28 +4,60 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-	private Scene CurrentScene;
+	public static LevelManager instance;
 
-	// Use this for initialization
-	void Start () {
+	//[SerializeField] IntReference SavedLevel;
+	[SerializeField] IntReference StartScene;
+	[SerializeField] SaveManager sm;
+
+	[NonSerialized] public Scene CurrentScene;
+	//private Scene StartScene;
+
+	public int GetStartScene
+	{
+		get { return StartScene.value; }
+	}
+
+	private void Awake()
+	{
+		if (instance != null) {
+			Destroy(gameObject);
+		} else {
+			instance = this;
+			DontDestroyOnLoad(gameObject);
+		}
+
+		StartScene.value = SceneManager.GetActiveScene().buildIndex;
 		CurrentScene = SceneManager.GetActiveScene();
 	}
-	
-	// Update is called once per frame
-	void Update () {
 
+	private void OnLevelWasLoaded(int level)
+	{
+		CurrentScene = SceneManager.GetActiveScene();
+		sm.SavedLevel.value = CurrentScene.buildIndex;
+
+		if (level != 0 && !CurrentScene.name.Contains("enlighten")) {
+			// SavedLevel.value = level;
+			sm.Save();
+		}
 	}
 
 	public void LoadNextScene()
 	{
-		if (SceneManager.sceneCount >= CurrentScene.buildIndex) {
-			if (SceneManager.GetSceneByBuildIndex(CurrentScene.buildIndex + 1).name.Contains("enlighten")) {
-				SceneManager.LoadScene(CurrentScene.buildIndex + 2);
-			} else {
-				SceneManager.LoadScene(CurrentScene.buildIndex + 1);
-			}
+		if (CurrentScene.buildIndex + 1 < 4) {
+			SceneManager.LoadScene(CurrentScene.buildIndex + 1);
 		} else {
-			//Debug.LogWarning("there no " + (CurrentScene.buildIndex + 2) + " index existing in build");
+			SceneManager.LoadScene(StartScene.value);
 		}
+	}
+
+	public void LoadScene(int index)
+	{
+		SceneManager.LoadScene(index);
+	}
+
+	public void ReloadCurrentScene()
+	{
+		SceneManager.LoadScene(CurrentScene.buildIndex);
 	}
 }

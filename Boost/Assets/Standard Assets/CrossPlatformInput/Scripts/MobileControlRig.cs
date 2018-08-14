@@ -13,11 +13,11 @@ namespace UnityStandardAssets.CrossPlatformInput
         , UnityEditor.Build.IActiveBuildTargetChanged
 #endif
     {
-        // this script enables or disables the child objects of a control rig
-        // depending on whether the USE_MOBILE_INPUT define is declared.
+		// this script enables or disables the child objects of a control rig
+		// depending on whether the USE_MOBILE_INPUT define is declared.
 
-        // This define is set or unset by a menu item that is included with
-        // the Cross Platform Input package.
+		// This define is set or unset by a menu item that is included with
+		// the Cross Platform Input package.
 
 
 #if !UNITY_EDITOR
@@ -26,7 +26,19 @@ namespace UnityStandardAssets.CrossPlatformInput
 		CheckEnableControlRig();
 	}
 #else
-        public int callbackOrder
+		//public static MobileControlRig instance;
+
+		//private void Awake()
+		//{
+		//	if (instance != null) {
+		//		Destroy(this);
+		//	} else {
+		//		instance = this;
+		//		DontDestroyOnLoad(this);
+		//	}
+		//}
+
+		public int callbackOrder
         {
             get
             {
@@ -69,7 +81,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 
         private void Update()
         {
-            CheckEnableControlRig();
+            //CheckEnableControlRig();
         }
 #endif
 

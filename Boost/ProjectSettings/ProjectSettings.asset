@@ -118,9 +118,28 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.0.5
+  bundleVersion: 0.0.5a
   preloadedAssets:
   - {fileID: 100212, guid: 89e9d3a8451224e4c9e1d070eefa315c, type: 3}
+  - {fileID: 2100000, guid: 8a231bc7e062c7147a6e7e81e5079a21, type: 2}
+  - {fileID: 2100000, guid: 33bffca00e2b9254981272f1236f55e7, type: 2}
+  - {fileID: 2100000, guid: eb2d682d9e4d89f4daf9651e725590f5, type: 2}
+  - {fileID: 2100000, guid: 1df160be967740143bdc877105853cc9, type: 2}
+  - {fileID: 2100000, guid: 29fc339664e262840ac028773520a9d2, type: 2}
+  - {fileID: 2100000, guid: 98f2e6fe824a61641a288da722c9ba12, type: 2}
+  - {fileID: 2100000, guid: 68dafbee26197d748b5fd89a8b659302, type: 2}
+  - {fileID: 2100000, guid: a0eac7a2154d68b4c9d41f79fe22bc68, type: 2}
+  - {fileID: 2100000, guid: 1ed59dcd6ed5bc247bbd78fdd1978938, type: 2}
+  - {fileID: 2100000, guid: c155deadb169faf438f96e1185d67cd9, type: 2}
+  - {fileID: 2100000, guid: f2462eb29837dbc438bf80403bcedeca, type: 2}
+  - {fileID: 2100000, guid: 6c384542080d89c458d6b7fea9c99de1, type: 2}
+  - {fileID: 2100000, guid: 8eb130ece61632447823d784c3ba9847, type: 2}
+  - {fileID: 2100000, guid: c995ad1815313d74e966951ff6421f81, type: 2}
+  - {fileID: 100004, guid: a60db57b77ef925428a9d64b5007963a, type: 3}
+  - {fileID: 100006, guid: 495b2759af4ab344caf42542293c4c6a, type: 3}
+  - {fileID: 100010, guid: 6f5edd77d4997f94790cd162dafb26ed, type: 3}
+  - {fileID: 100002, guid: 4abca16d05d6a44408d68a6670ebefba, type: 3}
+  - {fileID: 100000, guid: cd1f868e2a12cf1489626a7720df289e, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -154,7 +173,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.DieediProd.RbotsCorridors
   buildNumber: {}
-  AndroidBundleVersionCode: 8
+  AndroidBundleVersionCode: 9
   AndroidMinSdkVersion: 18
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1

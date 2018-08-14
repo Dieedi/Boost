@@ -51,6 +51,15 @@ public class Player : MonoBehaviour {
 	private Vector3 v_right = Vector3.right;
 	private Vector3 v_left = Vector3.left;
 
+	private bool moveRight;
+	private bool moveLeft;
+
+	private GameManager gm;
+
+	private void Awake()
+	{
+		gm = FindObjectOfType<GameManager>();
+	}
 	// Use this for initialization
 	void Start()
 	{
@@ -65,7 +74,17 @@ public class Player : MonoBehaviour {
 	{
 		StateCheck();
 
-		MoveH = CrossPlatformInputManager.GetAxis("Horizontal"); //Input.GetAxis("Horizontal");
+		if (gm.dragControls) {
+			MoveH = CrossPlatformInputManager.GetAxis("Horizontal"); //Input.GetAxis("Horizontal");
+		} else {
+			if (CrossPlatformInputManager.GetButtonDown("MoveRight")) moveRight = true;
+			if (CrossPlatformInputManager.GetButtonUp("MoveRight")) moveRight = false;
+			if (moveRight) MoveRight();
+
+			if (CrossPlatformInputManager.GetButtonDown("MoveLeft")) moveLeft = true;
+			if (CrossPlatformInputManager.GetButtonUp("MoveLeft")) moveLeft = false;
+			if (moveLeft) MoveLeft();
+		}
 
 		if (!OverrideLookAt) {
 			// Rotate mesh in direction depending on velocity and orientation given by keyboard
@@ -127,13 +146,9 @@ public class Player : MonoBehaviour {
 			newVelocity = rb.velocity;
 
 			if (MoveH > 0 && rb.velocity.normalized.x >= 0) {
-				newVelocity += v_right * velocitySpeedModifier * Time.deltaTime;
-				newVelocity = new Vector3(Mathf.Clamp(newVelocity.x, 0, velocityMax), newVelocity.y, newVelocity.z);
-				frontOrientation = 90;
+				MoveRight();
 			} else if (MoveH < 0 && rb.velocity.normalized.x <= 0) {
-				newVelocity += v_left * velocitySpeedModifier * Time.deltaTime;
-				newVelocity = new Vector3(Mathf.Clamp(newVelocity.x, -velocityMax, 0), newVelocity.y, newVelocity.z);
-				frontOrientation = -90;
+				MoveLeft();
 			}
 
 			rb.velocity = newVelocity;
@@ -142,6 +157,27 @@ public class Player : MonoBehaviour {
 				audioSource.Stop();
 		}
 	}
+
+	public void MoveRight()
+	{
+		//Debug.Log("Move right");
+		newVelocity = rb.velocity;
+		newVelocity += v_right * velocitySpeedModifier * Time.deltaTime;
+		newVelocity = new Vector3(Mathf.Clamp(newVelocity.x, 0, velocityMax), newVelocity.y, newVelocity.z);
+		frontOrientation = 90;
+		rb.velocity = newVelocity;
+	}
+
+	public void MoveLeft()
+	{
+		//Debug.Log("Move left");
+		newVelocity = rb.velocity;
+		newVelocity += v_left * velocitySpeedModifier * Time.deltaTime;
+		newVelocity = new Vector3(Mathf.Clamp(newVelocity.x, -velocityMax, 0), newVelocity.y, newVelocity.z);
+		frontOrientation = -90;
+		rb.velocity = newVelocity;
+	}
+
 
 	private void Animate()
 	{

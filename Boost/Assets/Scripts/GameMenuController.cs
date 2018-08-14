@@ -10,12 +10,15 @@ public class GameMenuController : MonoBehaviour {
 	//[SerializeField] IntReference SavedLevel;
 	[SerializeField] Button bt_continue;
 	[SerializeField] GameObject p_startMenu;
+	[SerializeField] GameObject p_optionsMenu;
 	[SerializeField] GameObject p_PlayMenu;
-	[SerializeField] LevelManager lm;
-	[SerializeField] SaveManager sm;
+	[SerializeField] GameObject b_joystick;
+	[SerializeField] GameObject b_LeftRight;
 
-	private int startLevel;
+	private int startLevelIndex;
 	private bool playMenuExist = false;
+	private LevelManager lm;
+	private SaveManager sm;
 
 	private void Awake()
 	{
@@ -25,6 +28,9 @@ public class GameMenuController : MonoBehaviour {
 			instance = this;
 			DontDestroyOnLoad(gameObject);
 		}
+
+		lm = FindObjectOfType<LevelManager>();
+		sm = FindObjectOfType<SaveManager>();
 	}
 
 	private void Start()
@@ -34,16 +40,19 @@ public class GameMenuController : MonoBehaviour {
 
 	private void HideContinue()
 	{
-		if (sm.SavedLevel.value > startLevel) {
+		if (sm.SavedLevel.value > startLevelIndex) {
 			bt_continue.interactable = true;
+		} else {
+			bt_continue.interactable = false;
 		}
 	}
 
-	private void OnLevelWasLoaded(int level)
+	public void OnEventLevelLoadEnd()
 	{
-		startLevel = lm.GetStartScene;
+		//Debug.Log("GMC : levelloadendevent, startlevelindex : " + startLevelIndex + ", current scene index : " + lm.CurrentScene.buildIndex);
+		startLevelIndex = lm.GetStartSceneIndex;
 
-		if (startLevel == lm.CurrentScene.buildIndex) {
+		if (startLevelIndex == lm.CurrentScene.buildIndex) {
 			p_PlayMenu.SetActive(false);
 			p_startMenu.SetActive(true);
 		} else {
@@ -57,5 +66,44 @@ public class GameMenuController : MonoBehaviour {
 	public void OnClickRestart()
 	{
 		lm.ReloadCurrentScene();
+	}
+
+	public void OnClickOptions()
+	{
+		p_startMenu.SetActive(false);
+		p_optionsMenu.SetActive(true);
+	}
+
+	public void OnClickBack()
+	{
+		p_startMenu.SetActive(true);
+		p_optionsMenu.SetActive(false);
+	}
+
+	public void OnControlModeJoystick(bool joystickOn)
+	{
+		b_joystick.SetActive(joystickOn);
+		b_LeftRight.SetActive(!joystickOn);
+	}
+
+	public void OnClickStart()
+	{
+		lm.LoadNextScene();
+	}
+
+	public void OnClickContinue()
+	{
+		lm.LoadScene(sm.SavedLevel.value);
+	}
+
+	public void OnClickReload()
+	{
+		lm.ReloadCurrentScene();
+	}
+
+	public void OnClickMenu()
+	{
+		//Debug.Log("OnClickMenu, start level is : " + startLevelIndex);
+		lm.LoadScene(startLevelIndex);
 	}
 }

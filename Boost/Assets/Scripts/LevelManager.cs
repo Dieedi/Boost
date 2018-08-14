@@ -1,21 +1,39 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
 	public static LevelManager instance;
-
-	//[SerializeField] IntReference SavedLevel;
+	
 	[SerializeField] IntReference StartScene;
-	[SerializeField] SaveManager sm;
-
+	[SerializeField] UnityEvent e_levelLoadEnd;
 	[NonSerialized] public Scene CurrentScene;
-	//private Scene StartScene;
+	
+	private SaveManager sm;
 
-	public int GetStartScene
+	public int GetStartSceneIndex
 	{
 		get { return StartScene.value; }
+	}
+
+	private void OnEnable()
+	{
+		SceneManager.sceneLoaded += OnLevelLoadDone;
+	}
+
+	private void OnLevelLoadDone(Scene scene, LoadSceneMode mode)
+	{
+		//Debug.Log("should cast event");
+		CurrentScene = SceneManager.GetActiveScene();
+		//Debug.Log("current scene : " + SceneManager.GetActiveScene());
+		if (scene.buildIndex != 0 && !CurrentScene.name.Contains("enlighten")) {
+			sm.SavedLevel.value = CurrentScene.buildIndex;
+			sm.Save();
+		}
+
+		e_levelLoadEnd.Invoke();
 	}
 
 	private void Awake()
@@ -29,18 +47,18 @@ public class LevelManager : MonoBehaviour {
 
 		StartScene.value = SceneManager.GetActiveScene().buildIndex;
 		CurrentScene = SceneManager.GetActiveScene();
+		sm = FindObjectOfType<SaveManager>();
 	}
 
-	private void OnLevelWasLoaded(int level)
-	{
-		CurrentScene = SceneManager.GetActiveScene();
-		sm.SavedLevel.value = CurrentScene.buildIndex;
+	//private void OnLevelWasLoaded(int level)
+	//{
+	//	CurrentScene = SceneManager.GetActiveScene();
 
-		if (level != 0 && !CurrentScene.name.Contains("enlighten")) {
-			// SavedLevel.value = level;
-			sm.Save();
-		}
-	}
+	//	if (level != 0 && !CurrentScene.name.Contains("enlighten")) {
+	//		sm.SavedLevel.value = CurrentScene.buildIndex;
+	//		sm.Save();
+	//	}
+	//}
 
 	public void LoadNextScene()
 	{
@@ -53,6 +71,7 @@ public class LevelManager : MonoBehaviour {
 
 	public void LoadScene(int index)
 	{
+		//Debug.Log("LoadScene index : " + index);
 		SceneManager.LoadScene(index);
 	}
 

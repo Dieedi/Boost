@@ -22,6 +22,7 @@ public class SaveManager : MonoBehaviour {
 	public void Save()
 	{
 		PlayerPrefs.SetString("level", Helper.Serialize<IntReference>(SavedLevel));
+		PlayerPrefs.Save();
 		// Debug.Log("game saved : " + PlayerPrefs.GetString("level"));
 	}
 
